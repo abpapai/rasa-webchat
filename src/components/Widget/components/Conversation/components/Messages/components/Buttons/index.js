@@ -56,6 +56,7 @@ class Buttons extends PureComponent {
                     target={linkTarget || '_blank'}
                     rel="noopener noreferrer"
                     className={'rw-reply'}
+                    onMouseUp={e => e.stopPropagation()}
                   >
                     {reply.get('title')}
                   </a>
@@ -67,6 +68,7 @@ class Buttons extends PureComponent {
                   key={index}
                   className={'rw-reply'}
                   onClick={(e) => { e.stopPropagation(); this.handleClick(reply); }}
+                  onMouseUp={e => e.stopPropagation()}
                 >
                   {reply.get('title')}
                 </div>
